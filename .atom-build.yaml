@@ -1,0 +1,18 @@
+cmd: java
+name: run
+args:
+    - Level
+targets:
+    build jar:
+        cmd: jar
+        args:
+            - -cfe
+            - Level.jar
+            - Level
+            - "*.class"
+    run jar:
+        name: Run test
+        cmd: java
+        args:
+            - -jar
+            - Level.jar
